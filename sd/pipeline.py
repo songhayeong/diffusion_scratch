@@ -98,7 +98,7 @@ def generate(prompt: str, uncond_prompt: str, input_image=None, strength=0.8, do
         diffusion = models["diffusion"]
         diffusion.to(device)
 
-        timesteps = tqdm(sampler.timsteps):
+        timesteps = tqdm(sampler.timsteps)
         for i, timestep in enumerate(timesteps):
             # (1, 320)
             time_embedding = get_time_embedding(timestep).to(device)
